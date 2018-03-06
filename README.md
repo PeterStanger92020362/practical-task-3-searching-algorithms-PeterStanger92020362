@@ -4,7 +4,7 @@ Starter code for assignment IT6033 Practical Task 3
 ## Framework
 
 You are provided with a framework for programming their algorithms.   
-Classes provided, in the classroom repository _IT6033-Practical-Task-3-Searching-Algorithms_:
+Classes provided, in your classroom repository _IT6033-Practical-Task-3-Searching-Algorithms-[your-github-user-name]_:
 * in folder `src/searchassessment`  
   - a starter class `SequentialSearchString.java`, with methods 
     * `indexOf(String term, String[] collection)` - searches for a term in a collection and returns its index position
@@ -31,7 +31,7 @@ Additionally corresponding JUnit test classes with test data and expected output
 
 
 ## Student Assessment Tasks
-You will program the following algorithms to solve a real world problem:  
+You will program the following algorithms:  
 1. a sequential search on an arrays of strings, read from an input file.
 2. a binary search on an arrays of strings, read from an input file.
   

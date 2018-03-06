@@ -14,12 +14,19 @@ import utils.Stopwatch;
  * "Collection" in this class is used in the broader sense 
  * and not in the strict Java sense. For example a collection may be an array 
  * or a list
- *   
- * YOUR TASK:
- * 1. implement indexOf method
- * 2. test it using JUnit test class provided BinarySearchStringTest.java
- * 3. Implement main method
- * 4. Perform measurements using data sets provided
+ * 
+ * --------------------------------------------------------------------------
+ * YOUR TASKS
+ * 
+ * QUESTION 2:
+ * a. implement indexOf method
+ * b. test it using JUnit test class provided SequentialSearchStringTest.java
+ *
+ * QUESTION 3:
+ * a. Implement main method
+ * b. Perform measurements using data sets provided
+ 
+ * --------------------------------------------------------------------------
  * 
  * @author Computer Power Plus
  * @author YOUR NAME
@@ -48,8 +55,9 @@ public class SequentialSearchString {
  */    
     public static int indexOf(String term, String[] collection){
        
+        // QUESTION 2
         // YOUR TASK:
-        // IMPLEMENT THE BINARY SEARCH
+        // IMPLEMENT THE SEQUENTIAL SEARCH
         
         return -1; // default implementation - change this when you implement the search.
      }
@@ -67,13 +75,14 @@ public class SequentialSearchString {
      */
     public static void main(String[] args)  { 
         
-           // YOUR TASK: 
-            // - READ INPUT ARGUMENTS FROM A FILE
-            //    Hint: you may use the provided utility class In 
-            // - CALL THE SEARCHING METHOD
-            // - IMPLEMENT TIMER
-            //   Hint: you may use the provided Stopwatch utility class
-            // - IMPLEMENT STEP COUNTER  
+      // QUESTION 3
+      // YOUR TASK: 
+      // - READ INPUT ARGUMENTS FROM A FILE
+      //    Hint: you may use the provided utility class In 
+      // - CALL THE SEARCHING METHOD
+      // - IMPLEMENT TIMER
+      //   Hint: you may use the provided Stopwatch utility class
+      // - IMPLEMENT STEP COUNTER  
       
     } 
     

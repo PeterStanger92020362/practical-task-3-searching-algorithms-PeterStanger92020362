@@ -5,7 +5,7 @@ import utils.In;
 import utils.Stopwatch;
 
 /**
- * The class BinarySearch implements a binary search algorithm 
+ * The class BinarySearchString implements a binary search algorithm 
  * to search for a term in collection of strings.
  * The collection MUST BE A SORTED COLLECTION. This class will not sort it.
  * 
@@ -13,12 +13,23 @@ import utils.Stopwatch;
  * - Does the element exists in a collection? -> method contains()
  * - How to get the element from a collection? - > method indexOf()
  * 
- * YOUR TASK:
- * 1. implement indexOf method
- * 2. test it using JUnit test class provided BinarySearchStringTest.java
- * 3. Implement main method
- * 4. Perform measurements using data sets provided
+* --------------------------------------------------------------------------
+ * YOUR TASKS
  * 
+ * QUESTION 2:
+ * a. implement indexOf method
+ * b. test it using JUnit test class provided BinarySearchStringTest.java
+ *
+ * QUESTION 3:
+ * a. Implement main method to read data from a file, calling indexOf or contains method
+ *    and print the search result and execution time
+ * b. Perform several measurements using data sets provided:
+ *    run the program (this class) several times, i.e. with each of the data sets provided,
+ *    and record the results
+ * c. implement a step counter and perform measurements again. Record your results.
+ *  
+ * --------------------------------------------------------------------------
+ *
  * @author Computer Power Plus
  * @author YOUR NAME
  */
@@ -49,8 +60,16 @@ public class BinarySearchString {
  */    
     public static int indexOf(String term, String[] collection) {
         
-        // YOUR TASK:
-        // IMPLEMENT THE BINARY SEARCH
+      // ========== YOUR TASK =========================================================
+      // QUESTION 2
+      // YOUR TASK:
+      // IMPLEMENT THE BINARY SEARCH
+     
+      // QUESTION 3
+      // - IMPLEMENT STEP COUNTER  
+      //   Note: you will need to comment it out when doing time measurements, 
+      //         because the step counter impacts the execution time
+      // ===============================================================================
         
         return -1; // default implementation - change this when you implement the search.
       }
@@ -69,15 +88,35 @@ public class BinarySearchString {
      * @param arg[1] is the name of an input file, containing one item per line.
      */
     public static void main(String[] args)  { 
-
-            // YOUR TASK: 
-            // - READ INPUT ARGUMENTS FROM A FILE
-            //    Hint: you may use the utility classes In, StdIn provided
-            // - CALL THE SEARCHING METHOD
-            // - IMPLEMENT TIMER
-            //   Hint: you may use the provided Stopwatch utility class
-            // - IMPLEMENT STEP COUNTER  
     
+        // READ INPUT ARGUMENTS FROM A FILE
+        //Read the search term
+        String term = new String((args[0]));
+        
+        // Read the input data stream (the collection)
+        In in;
+        String[] collection;
+        try{ 
+            in = new In(args[1]);
+            collection = in.readAllLines();
+        
+            // Print the goal
+            System.out.print("Searching for " + term);
+            System.out.println(" in collection of size " + collection.length);
+
+            // ========== YOUR TASK =========================================================
+            // QUESTION 3 
+            // - CALL THE SEARCHING METHOD 
+            // - IMPLEMENT TIMER and print the execution time
+            //   Hint: you may use the provided Stopwatch utility class, or implement your own.
+            // - print the search result
+            // ===============================================================================
+         
+        } catch (java.lang.IllegalArgumentException e) {
+            // Error with input data file
+            System.out.println(e+ ": Incorrect data file as argument: " + args[1]);
+        }
+
     } 
     
 }

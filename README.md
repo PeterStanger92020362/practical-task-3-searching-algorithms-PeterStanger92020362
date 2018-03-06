@@ -26,7 +26,7 @@ Additionally corresponding JUnit test classes with test data and expected output
 * in folder `test/searchassessment` 
   - `SequentialSearchStringTest.java`
   - `BinarySearchStringTest.java`
-  - `SearchPracticeTestSuite.java` that allows to run both test classes in one go
+  - `SearchAssessmentTestSuite.java` that allows to run both test classes in one go
   - instructions on how to run test cases in NetBeans are found below
 
 

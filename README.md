@@ -41,6 +41,8 @@ for the two algorithms, on input data files of various sizes.
 
 ### Part 1: Implement a sequential search on an array of Strings
 
+#### For Question 2
+
 * Implement the searching in `SequentialSearchString.indexOf()`
 
 * Test your implementation using JUnit test `SequentialSearchStringTest.java`
@@ -49,13 +51,15 @@ for the two algorithms, on input data files of various sizes.
   - select __Run File__
   - look at results in test results panel
   - (you may add other tests of your choice in that class)
-    
+  
+#### For Question 3
+
 * Implement the measurements in SequentialSearch.main()
     - reading from an input file containing a list of Strings, one per line
     - input files are provided in folder `data`
     - implement a timer, optionally using `utils.Stopwatch.java`
     - test with small file first
-    - NetBeans > Project > Properties > Run > create new configuration __Sequential Search__  with 
+    - NetBeans > Project > Properties > Run > create new configuration __Sequential Search String__  with 
       - main class: `SequentialSearchString.java`
       - arguments: `"Viens voir papa!", "movieTitles100.txt"`
       - directory: `..\data`
@@ -77,7 +81,7 @@ Similar to above, with classes
 - `BinarySearch.java`
 - `BinarySearchTest.java`
 
-Run with a new configuration __Binary Search__
+Run with a new configuration __Binary Search String__
 
 Note: input files must be __sorted__ lists for a binary search.
 

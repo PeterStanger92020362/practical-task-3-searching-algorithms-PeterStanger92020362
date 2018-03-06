@@ -38,7 +38,7 @@ public class SequentialSearchStringTest {
      */
     @Test
     public void testContains() {
-        System.out.println("Testing method: contains()");
+        System.out.println("SequentialSearchString - Testing method: contains()");
         String[] collection;
  
         // Test case: very small array of single words
@@ -69,7 +69,7 @@ public class SequentialSearchStringTest {
      */
     @Test
     public void testIndexOf() {
-        System.out.println("Testing method: indexOf()");
+        System.out.println("SequentialSearchString - Testing method: indexOf()");
         String[] collection;
     
         // Test case: very small array of single words
@@ -102,7 +102,7 @@ public class SequentialSearchStringTest {
      */
     @Test
     public void testMain() {
-        System.out.println("NOT YET Testing main method: ");
+        System.out.println("SequentialSearchString - NOT YET Testing main method: ");
         String[] args = null;
         
         // YOUR TASK: 

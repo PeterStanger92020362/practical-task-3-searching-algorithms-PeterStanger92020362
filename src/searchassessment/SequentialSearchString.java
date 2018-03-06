@@ -76,10 +76,10 @@ public class SequentialSearchString {
   
 /**
      * Reads in 
-     * - a search term (integer)
-     * - a sequence of integers from a file (.txt file)
+     * - a search term (String)
+     * - a sequence of Strings from a file (.txt file)
      * both specified as a command-line argument;
-     * searches for the term in the collection of integers
+     * searches for the term in the collection
      * prints the result of the search and the execution time in seconds
      *
      * example on how to run (in your IDE): SequentialSearchString.java "Alice" movies.txt

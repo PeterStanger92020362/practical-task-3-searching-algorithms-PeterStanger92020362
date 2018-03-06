@@ -36,4 +36,48 @@ You will program the following algorithms to solve a real world problem:
 2. a binary search on an arrays of strings, read from an input file.
   
 You will measure and compare running time and number of steps 
-for algorithms a and b, on input data files of various sizes. 
+for the two algorithms, on input data files of various sizes. 
+
+
+### Part 1: Implement a sequential search on an array of Strings
+
+* Implement the searching in `SequentialSearchString.indexOf()`
+
+* Test your implementation using JUnit test `SequentialSearchStringTest.java`
+  - select `SequentialSearchStringTest.java`
+  - right click
+  - select __Run File__
+  - look at results in test results panel
+  - (you may add other tests of your choice in that class)
+    
+* Implement the measurements in SequentialSearch.main()
+    - reading from an input file containing a list of Strings, one per line
+    - input files are provided in folder `data`
+    - implement a timer, optionally using `utils.Stopwatch.java`
+    - test with small file first
+    - NetBeans > Project > Properties > Run > create new configuration __Sequential Search__  with 
+      - main class: `SequentialSearchString.java`
+      - arguments: `"Viens voir papa!", "movieTitles100.txt"`
+      - directory: `..\data`
+     - Manu __Run__ > select __Run Project__ - this will run whichever configuration is selected in the dropdown box visible on the toolbar
+    
+* Perform time measurements with files of different sizes
+    - run with provided files from `movieTitles20.txt` to `movieTitles2Million.txt` (or create your own)
+    - record measurements in a document
+    
+* Perform step counting
+    - implement step counter in your algorithm (comment it out when doing time measurements as this may affect the time)
+    - run with provided files from `movieTitles20.txt` to `movieTitles2Million.txt` (or create your own)
+    - record measurements in a document
+
+
+### Part 2: Implement a binary search on an array of ints
+
+Similar to above, with classes
+- `BinarySearch.java`
+- `BinarySearchTest.java`
+
+Run with a new configuration __Binary Search__
+
+Note: input files must be __sorted__ lists for a binary search.
+

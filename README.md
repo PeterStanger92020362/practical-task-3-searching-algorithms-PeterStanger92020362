@@ -28,7 +28,7 @@ Additionally corresponding JUnit test classes with test data and expected output
   - `BinarySearchStringTest.java`
   - `SearchAssessmentTestSuite.java` that allows to run both test classes in one go
   - instructions on how to run test cases in NetBeans are found below
-
+  - the sample data was obtained from the IMDb https://www.imdb.com/interfaces/ and Mockaroo https://mockaroo.com websites and processed to present correct data in appropriate format. 
 
 ## Student Assessment Tasks
 You will program the following algorithms:  

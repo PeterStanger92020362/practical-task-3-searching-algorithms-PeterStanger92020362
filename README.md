@@ -21,6 +21,7 @@ Classes provided, in your classroom repository _IT6033-Practical-Task-3-Searchin
     * sequences of strings (movie titles), one per line
   - files called `movieTitles20.txt` to `movieTitles2Million.txt`
   - sample test output listings to show measurements
+  - the sample data was obtained from the IMDb https://www.imdb.com/interfaces/ and Mockaroo https://mockaroo.com websites and processed to present correct data in appropriate format. 
 
 Additionally corresponding JUnit test classes with test data and expected outputs:
 * in folder `test/searchassessment` 
@@ -28,7 +29,6 @@ Additionally corresponding JUnit test classes with test data and expected output
   - `BinarySearchStringTest.java`
   - `SearchAssessmentTestSuite.java` that allows to run both test classes in one go
   - instructions on how to run test cases in NetBeans are found below
-  - the sample data was obtained from the IMDb https://www.imdb.com/interfaces/ and Mockaroo https://mockaroo.com websites and processed to present correct data in appropriate format. 
 
 ## Student Assessment Tasks
 You will program the following algorithms:  

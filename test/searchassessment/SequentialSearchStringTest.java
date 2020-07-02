@@ -102,7 +102,7 @@ public class SequentialSearchStringTest {
      */
     @Test
     public void testMain() {
-        System.out.println("SequentialSearchString - NOT YET Testing main method: ");
+        System.out.println("SequentialSearchString - Testing main method: ");
         String[] args = null;
         
         // YOUR TASK: 
@@ -113,17 +113,32 @@ public class SequentialSearchStringTest {
         //   as evidence of your measurements
 
         // Test 100
-//        System.out.println("== 100 items == 1. found, 2. not found");
-//        args = new String[] {"Viens voir papa!", "movieTitles100.txt"};
-//        SequentialSearchString.main(args);
-//        args = new String[] {"The Professor and His Field Glass", "movieTitles100.txt"};
-//        SequentialSearchString.main(args);
-//
-//
-//        // Test 1000
-//        System.out.println("== 1000 items == found ");
-//        args = new String[] {"The Professor and His Field Glass", "movieTitles1K.txt"};
-//        SequentialSearchString.main(args);
+        System.out.println("== 100 items == 1. found, 2. not found");
+        args = new String[] {"Viens voir papa!", "data\\searchassessment\\movieTitles100.txt"};
+        SequentialSearchString.main(args);
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles100.txt"};
+        SequentialSearchString.main(args);
+
+        // Test 1000
+        System.out.println("== 1000 items == found ");
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles1K.txt"};
+        SequentialSearchString.main(args);
+
+        // Test 100K
+        System.out.println("== 100K items ===");
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles100K.txt"};
+        BinarySearchString.main(args);
+        args = new String[] {"The Orange Cat", "data\\searchassessment\\movieTitles100K.txt"};
+        BinarySearchString.main(args);
+
+        // Test 2Million
+        System.out.println("== 2Million items ===");
+        args = new String[] {"The Professor and His Beloved Equation", "data\\searchassessment\\movieTitles_2million.txt"};
+        BinarySearchString.main(args);
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles_2million.txt"};
+        BinarySearchString.main(args);
+
+
     }
     
 }

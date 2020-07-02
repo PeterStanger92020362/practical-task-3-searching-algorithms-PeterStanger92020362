@@ -32,11 +32,13 @@ import utils.Stopwatch;
  
  * --------------------------------------------------------------------------
  * 
- * @author Computer Power Plus
- * @author YOUR NAME
+ * @author Whitecliffe
+ * @author Peter Stanger
  */
 public class SequentialSearchString {
-    
+
+    private static int stepCounter = 0;
+
  /**
  * Checks if collection contains an item.
  * @param term the search term, in this case a String
@@ -69,7 +71,17 @@ public class SequentialSearchString {
       //   Note: you will need to comment it out when doing time measurements, 
       //         because the step counter impacts the execution time
       // ===============================================================================
-        
+
+        for (int i = 0; i < collection.length; i++) {
+
+            //stepCounter++;
+
+            if (collection[i].compareTo(term) == 0) {
+                return i;
+            }
+        }
+
+
         return -1; // default implementation - change this when you implement the search.
      }
  
@@ -90,7 +102,9 @@ public class SequentialSearchString {
      * @param args[2] the collection
      */
     public static void main(String[] args)  { 
-    
+
+        int searchResult = 0;
+
         // READ INPUT ARGUMENTS FROM A FILE
         //Read the search term
         String term = new String((args[0]));
@@ -113,7 +127,15 @@ public class SequentialSearchString {
             //   Hint: you may use the provided Stopwatch utility class, or implement your own.
             // - print the search result
             // ===============================================================================
-         
+
+            searchResult = indexOf(term, collection);
+
+            if(searchResult >= 0){
+                System.out.println(term + " was found at index " + searchResult);
+            } else {
+                System.out.println("Could not find " + term + " in the collection");
+            }
+
         } catch (java.lang.IllegalArgumentException e) {
             // Error with input data file
             System.out.println(e+ ": Incorrect data file as argument: " + args[1]);

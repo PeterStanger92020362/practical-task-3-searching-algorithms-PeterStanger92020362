@@ -72,9 +72,11 @@ public class SequentialSearchString {
       //         because the step counter impacts the execution time
       // ===============================================================================
 
+        stepCounter = 0;
+
         for (int i = 0; i < collection.length; i++) {
 
-            //stepCounter++;
+            stepCounter++;
 
             if (collection[i].compareTo(term) == 0) {
                 return i;
@@ -128,13 +130,19 @@ public class SequentialSearchString {
             // - print the search result
             // ===============================================================================
 
+            long watchStart = System.nanoTime();
+
             searchResult = indexOf(term, collection);
+
+            long timeTaken = System.nanoTime()-watchStart;
 
             if(searchResult >= 0){
                 System.out.println(term + " was found at index " + searchResult);
             } else {
                 System.out.println("Could not find " + term + " in the collection");
             }
+            System.out.println("The search took " + timeTaken + " nanoseconds to complete.");
+            System.out.println("The search took " + stepCounter + " steps to complete");
 
         } catch (java.lang.IllegalArgumentException e) {
             // Error with input data file

@@ -78,6 +78,8 @@ public class BinarySearchString {
       //         because the step counter impacts the execution time
       // ===============================================================================
 
+        stepCounter = 0;
+
         int min = 0;
         int max = collection.length-1;  //initial - last element of array
         int guess = (min + max) / 2;   //initial guess - middle element of array
@@ -85,7 +87,7 @@ public class BinarySearchString {
 
         while( min <= max ){
 
-            //stepCounter++;
+            stepCounter++;
 
             if (collection[guess].compareTo(term) < 0){
                 min = guess + 1;
@@ -161,6 +163,7 @@ public class BinarySearchString {
                 System.out.println("Could not find " + term + " in the collection");
             }
             System.out.println("The search took " + timeTaken + " nanoseconds to complete.");
+            System.out.println("The search took " + stepCounter + " steps to complete");
 
 
         } catch (java.lang.IllegalArgumentException e) {

@@ -127,16 +127,16 @@ public class SequentialSearchStringTest {
         // Test 100K
         System.out.println("== 100K items ===");
         args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles100K.txt"};
-        BinarySearchString.main(args);
+        SequentialSearchString.main(args);
         args = new String[] {"The Orange Cat", "data\\searchassessment\\movieTitles100K.txt"};
-        BinarySearchString.main(args);
+        SequentialSearchString.main(args);
 
         // Test 2Million
         System.out.println("== 2Million items ===");
         args = new String[] {"The Professor and His Beloved Equation", "data\\searchassessment\\movieTitles_2million.txt"};
-        BinarySearchString.main(args);
+        SequentialSearchString.main(args);
         args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles_2million.txt"};
-        BinarySearchString.main(args);
+        SequentialSearchString.main(args);
 
 
     }

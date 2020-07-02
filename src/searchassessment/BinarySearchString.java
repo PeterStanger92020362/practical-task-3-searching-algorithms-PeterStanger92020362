@@ -1,10 +1,13 @@
 package searchassessment;
 
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+
 import utils.In;
 import utils.Stopwatch;
 
 import static java.util.Arrays.sort;
+import static java.util.Arrays.spliterator;
 
 /**
  * The class BinarySearchString implements a binary search algorithm 
@@ -144,13 +147,20 @@ public class BinarySearchString {
             // - print the search result
             // ===============================================================================
 
+            //Stopwatch watch = new Stopwatch();
+            long watchStart = System.nanoTime();
+
             searchResult = indexOf(term, collection);
+
+            long timeTaken = System.nanoTime()-watchStart;
+            //double timeTaken = watch.elapsedTime();
 
             if(searchResult >= 0){
                 System.out.println(term + " was found at index " + searchResult);
             } else {
                 System.out.println("Could not find " + term + " in the collection");
             }
+            System.out.println("The search took " + timeTaken + " nanoseconds to complete.");
 
 
         } catch (java.lang.IllegalArgumentException e) {

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="movieTitles2Million">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data/searchassessment/movieTitles2Million.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

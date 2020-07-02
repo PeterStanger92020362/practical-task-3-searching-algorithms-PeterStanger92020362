@@ -4,6 +4,8 @@ import java.util.Arrays;
 import utils.In;
 import utils.Stopwatch;
 
+import static java.util.Arrays.sort;
+
 /**
  * The class BinarySearchString implements a binary search algorithm 
  * to search for a term in collection of strings.
@@ -30,11 +32,13 @@ import utils.Stopwatch;
  *  
  * --------------------------------------------------------------------------
  *
- * @author Computer Power Plus
- * @author YOUR NAME
+ * @author Whitecliffe
+ * @author Peter Stanger 92020362
  */
 public class BinarySearchString {
-    
+
+    private static int stepCounter=0;
+
      /**
     * Checks if collection contains an item.
     * @param term the search term, in this case a String
@@ -70,7 +74,30 @@ public class BinarySearchString {
       //   Note: you will need to comment it out when doing time measurements, 
       //         because the step counter impacts the execution time
       // ===============================================================================
-        
+
+        int min = 0;
+        int max = collection.length-1;  //initial - last element of array
+        int guess = (min + max) / 2;   //initial guess - middle element of array
+
+
+        while( min <= max ){
+
+            //stepCounter++;
+
+            if (collection[guess].compareTo(term) < 0){
+                min = guess + 1;
+            } else if (collection[guess].compareTo(term) == 0){
+                return guess;
+            } else {
+                max = guess - 1;
+            }
+            guess = (min + max) / 2;
+        }
+
+        if ( min > max ){
+            return -1;
+        }
+
         return -1; // default implementation - change this when you implement the search.
       }
     
@@ -87,8 +114,10 @@ public class BinarySearchString {
      * @param arg[0] is the search term
      * @param arg[1] is the name of an input file, containing one item per line.
      */
-    public static void main(String[] args)  { 
-    
+    public static void main(String[] args)  {
+
+        int searchResult = 0;
+
         // READ INPUT ARGUMENTS FROM A FILE
         //Read the search term
         String term = new String((args[0]));
@@ -99,7 +128,10 @@ public class BinarySearchString {
         try{ 
             in = new In(args[1]);
             collection = in.readAllLines();
-        
+
+            // collection must be sorted first (eg A-Z)
+            sort(collection);
+
             // Print the goal
             System.out.print("Searching for " + term);
             System.out.println(" in collection of size " + collection.length);
@@ -111,7 +143,16 @@ public class BinarySearchString {
             //   Hint: you may use the provided Stopwatch utility class, or implement your own.
             // - print the search result
             // ===============================================================================
-         
+
+            searchResult = indexOf(term, collection);
+
+            if(searchResult >= 0){
+                System.out.println(term + " was found at index " + searchResult);
+            } else {
+                System.out.println("Could not find " + term + " in the collection");
+            }
+
+
         } catch (java.lang.IllegalArgumentException e) {
             // Error with input data file
             System.out.println(e+ ": Incorrect data file as argument: " + args[1]);

@@ -106,7 +106,7 @@ public class BinarySearchStringTest {
      */
     @Test
     public void testMain() {
-       System.out.println("NOT YET Testing main method: ");
+       System.out.println("Testing main method: ");
         String[] args = null;
         
         // YOUR TASK: 
@@ -117,17 +117,32 @@ public class BinarySearchStringTest {
         //   as evidence of your measurements
  
         // Test 100
-//        System.out.println("== 100 items == ");
-//        args = new String[] {"Viens voir papa!", "movieTitles100.txt"};
-//        BinarySearchString.main(args);
-//        args = new String[] {"The Professor and His Field Glass", "movieTitles100.txt"};
-//        BinarySearchString.main(args);
+        System.out.println("== 100 items == ");
+        args = new String[] {"Viens voir papa!", "data\\searchassessment\\movieTitles100.txt"};
+        BinarySearchString.main(args);
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles100.txt"};
+        BinarySearchString.main(args);
 
  
 //        // Test 1000
-//        System.out.println("== 1000 items == ");
-//        args = new String[] {"The Professor and His Field Glass", "movieTitles1K.txt"};
-//        BinarySearchString.main(args);
+        System.out.println("== 1000 items == ");
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles1K.txt"};
+        BinarySearchString.main(args);
+
+        // Test 100K
+        System.out.println("== 100K items ===");
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles100K.txt"};
+        BinarySearchString.main(args);
+        args = new String[] {"The Orange Cat", "data\\searchassessment\\movieTitles100K.txt"};
+        BinarySearchString.main(args);
+
+        // Test 2Million
+        System.out.println("== 2Million items ===");
+        args = new String[] {"The Professor and His Beloved Equation", "data\\searchassessment\\movieTitles_2million.txt"};
+        BinarySearchString.main(args);
+        args = new String[] {"The Professor and His Field Glass", "data\\searchassessment\\movieTitles_2million.txt"};
+        BinarySearchString.main(args);
+
     }
 
 
